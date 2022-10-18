@@ -7,12 +7,11 @@
     <link rel="apple-touch-icon" href="favicon.ico">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- CSS only -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <title>楞严经_楞严经全文及白话文译文_佛教经典</title>
     <meta name="keywords" content="楞严经,学习楞严经,首楞严经,大佛顶经,佛教经典,大佛顶首楞严经,中印度那烂陀大道场经,大佛顶如来密因修证了义诸菩萨万行首楞严经">
     <meta name="description" content="楞严经学习网站，原藏于龙宫，胜龙菩萨到龙宫说法，见龙藏中有此经，披阅之下，叹为希有，遂默诵而出，录呈印度国王，国王视其为国宝，严禁外流.般剌密谛尊者，弘法愿深，两次冒险，思送中国以求宏扬，不幸皆为关卡查禁，尊者乃费数年时间，以蝇头小字书于腊纸之上，剖膊藏于肉中，方得过关航海而来，于唐神龙元年抵达广州，随被房融请于制止寺，并将此经译成华文。下面大致说说楞严经每卷都在讲什么。">
-
     <style>
         .navbar-light .navbar-brand{
             color:#FFF;
@@ -63,8 +62,40 @@
         li{
             list-style-type:none;
         }
+                .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover{
+            color:#FFF;
+        }
         .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover{
             color:#FFF;
+        }
+
+        .contents{
+            margin:50px 0;
+            width:100%;
+            
+        }
+        .contents .cont-title{
+            text-align:center;
+            width:100%;
+            display: table;
+            vertical-align: middle;
+        }
+        .cont-title h2{
+            vertical-align: middle;
+            display:inline-block;
+            margin-bottom:0;
+        }
+        .cont-title button{
+            vertical-align: middle;
+            margin-left: 15px;
+        }
+        .content{
+            max-width:1200px;
+            margin:0 auto;
+            line-height: 2em;
+		    font-size: 18px;
+            margin-top:26px;
+            padding: 0 16px;
         }
         hr {
     margin-top: 20px;
@@ -79,13 +110,14 @@
     text-align: center;
     margin: 0 18px;
 }
+.content>div{
+    text-indent:2em;
+}
+
 
     </style>
 </head>
-
 <body>
-
-
 
     <nav class="navbar navbar-expand-lg navbar-light" style="background:linear-gradient(45deg, #020031 0%, #6d3353 100%);color:#FFF;">
         <a class="navbar-brand" href="index.html">首页</a>
@@ -96,12 +128,11 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-                <a class="nav-link" href="details.html?id=2&type=1&name=楞严经译文">楞严经译文 <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="details.html?id=1&type=1&name=楞严经全文">楞严经原文</a>
-              </li>
-              
+              <a class="nav-link" href="details.html?id=2&type=1&name=楞严经译文">楞严经译文 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="details.html?id=1&type=1&name=楞严经全文">楞严经原文</a>
+            </li>
             <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                 分卷查看楞严经
@@ -109,17 +140,18 @@
 
             <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown" id="fenjuan">
 
-                
-                
+              
             </ul>
+
+
             </li>
             <li class="nav-item">
               <a class="nav-link" target="_blank" href="https://support.qq.com/product/436459">留言读楞严经感悟</a>
             </li>
-
             <li class="nav-item">
                 <a class="nav-link" target="_blank" href="mobile.html">APP下载</a>
               </li>
+
           </ul>
 
           <span class="navbar-text">
@@ -134,9 +166,34 @@
       </div>
 
 
+
+      <div class="contents">
+
+        <div class="cont-title">
+            <h2>加载中……</h2>
+            
+        </div>
+
+        <div id="content">
+            
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <br><br>
-
-
     <div class="container">
         <div class="row" id="alllisttit">
 
@@ -172,26 +229,115 @@
       </div>
       <br><br>
 
-<hr>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">页面错误</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          页面错误，请返回首页
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭页面</button>
+          <button type="button" class="btn btn-primary"  data-dismiss="modal">好的</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<hr>
     <footer class="footer">
         
         网站部分内容转载自网络，如有侵犯到原作者相关权益，请联系我们，将及时处理。邮箱：minlongdemeng@163.com
     </footer>
 
-<!-- 
-<script src="bootstrap/js/jquery.slim.min.js"></script>
+
+
+
+<!-- JavaScript Bundle with Popper -->
+<!-- <script src="bootstrap/js/jquery.slim.min.js"></script>
 <script src="bootstrap/js/popper.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
-<!-- 
-<script src="basedata/index.js"></script>
-<script src="basedata/children.js"></script> -->
+
+<!-- <script src="basedata/index.js"></script>
+<script src="basedata/children.js"></script>
+<script src="basedata/data.js"></script> -->
+
 <script src="https://zaiercommon.oss-cn-beijing.aliyuncs.com/basedata/index.js"></script>
 <script src="https://zaiercommon.oss-cn-beijing.aliyuncs.com/basedata/children.js"></script>
+<script src="https://zaiercommon.oss-cn-beijing.aliyuncs.com/basedata/data.js"></script>
 
 <script src="commong.js"></script>
+
+
+
+<script>
+
+let id =lenyanjing.getUrlParma()['id'];
+let type =lenyanjing.getUrlParma()['type'];
+let titles =lenyanjing.getUrlParma()['name'];
+if(lenyanjing.isParamEmpty(id)){
+
+    $("#content").empty();
+
+    $("#content").append(lenyanjing.getContents(id,type))
+    $(".cont-title h2").html(lenyanjing.decodes(titles));
+    if(type == 2){
+
+        $("#showsours").remove();
+        let htt='<button type="button" id="showsour" class="btn btn-outline-info btn-sm" data-id='+id+' data-name='+lenyanjing.decodes(titles)+' data-type=3>原文</button>';
+        $(".cont-title").append(htt);
+    }
+
+    if(type == 3){
+
+        $("#showsour").remove();
+        let htt='<button type="button" id="showsours" class="btn btn-outline-info btn-sm" data-id='+id+' data-name='+lenyanjing.decodes(titles)+' data-type=2>译文</button>';
+        $(".cont-title").append(htt);
+        
+    }
+
+ 
+}else{
+    $('#exampleModal').modal('show')
+    $(".cont-title h2").html("数据加载失败");
+}
+
+
+$("body").on("click",'#showsour',function(){
+
+    let idd=$("#showsour").attr('data-id');
+    let types=$("#showsour").attr('data-type');
+    let names=$("#showsour").attr('data-name');
+    names=names.replace("译文","原文",names);
+
+    window.open("details.html?id="+idd+"&type="+types+"&name="+names,"_Blank");
+
+
+})
+
+$("body").on("click",'#showsours',function(){
+
+    let idd=$("#showsours").attr('data-id');
+    let types=$("#showsours").attr('data-type');
+    let names=$("#showsours").attr('data-name');
+    names=names.replace("原文","译文",names);
+
+    window.open("details.html?id="+idd+"&type="+types+"&name="+names,"_Blank");
+
+
+})
+
+</script>
+
 </body>
 </html>
